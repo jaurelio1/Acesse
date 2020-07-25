@@ -1,0 +1,21 @@
+.videos{
+    background-color: limegreen;
+}
+
+
+.videos .lista_videos a{
+    max-width: 150px;
+    border: 1px solid lightgreen;
+    border-radius: 5px;
+    color: black;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+}
+
+.videos .lista_videos a:hover{
+    background: lime;
+    color: white;
+}

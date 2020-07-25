@@ -1,0 +1,22 @@
+.disciplinas{
+    max-width: 700px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background: lightgreen;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.disciplinas article{
+    background: green;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.disciplinas p{
+    font-size: 15px;
+    color: #999;
+    margin-top: 5px;
+    line-height: 24px;
+}

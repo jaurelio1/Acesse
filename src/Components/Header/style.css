@@ -1,0 +1,25 @@
+.Header{
+    border-radius: 5px;
+    position: absolute;
+    height: 100px;
+    background: lightgreen;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.Header img{    
+    max-width: 350px;
+    margin: 15px auto 5;
+    padding: 0 15px;
+}
+
+.Header p{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    line-height: 24px;
+}
