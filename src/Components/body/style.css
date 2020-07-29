@@ -1,22 +1,36 @@
 .disciplinas{
-    max-width: 700px;
+    max-width: 500px;
     margin: 20px auto 0;
     padding: 20px;
     background: lightgreen;
     border-radius: 5px;
     border: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;    
 }
 
-.disciplinas article{
+.disciplinas .block-link{
     background: green;
     border: 1px solid #DDD;
     border-radius: 5px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
+    align-items: center;  
+}
+.disciplinas .block-link:hover{
+    background-color: lime;
+    cursor: pointer;
+}
+
+.disciplinas .block-link img{
+    max-width: 90px;
+    max-height: 80px;
+    padding-left: 2px;
 }
 .disciplinas p{
-    font-size: 15px;
-    color: #999;
+    padding-left: 3px;
+    font-size: 18px;
+    color: black;
     margin-top: 5px;
     line-height: 24px;
 }

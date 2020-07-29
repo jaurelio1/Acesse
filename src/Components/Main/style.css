@@ -1,9 +1,11 @@
 .main{
     background: limegreen;
+    height: 100vh;
     display: flex;
     flex-direction: column;    
 }
 
 .main .head{
-    padding-bottom: 100px;
+    padding-top: 25px;
+    padding-bottom: 150px;
 }

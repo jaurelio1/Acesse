@@ -1,7 +1,13 @@
 .videos{
     background-color: limegreen;
+    height: 100vh;    
 }
 
+.videos .lista_videos .modals{
+    margin-left: 300px;
+    max-width: 480px;
+    max-height: 280px;       
+}
 
 .videos .lista_videos a{
     max-width: 150px;

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import '../node_modules/react-modal-video/scss/modal-video.scss';
 import App from './App';
 import Mat from './Disciplinas/matematica';
 import Eng from './Disciplinas/engenharia';
