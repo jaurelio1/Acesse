@@ -34,3 +34,11 @@
     margin-top: 5px;
     line-height: 24px;
 }
+
+.body .dropdown{
+    margin-left: 100px;
+    border: 1px solid green;
+    border-radius: 5px;
+    max-width: 130px;
+    background:lightgreen;
+}

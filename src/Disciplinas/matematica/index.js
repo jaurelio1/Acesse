@@ -22,7 +22,7 @@ export default class Matematica extends Component{
     
     openModal(){
         this.setState({isOpen: true});
-    }
+    }   
 
     render(){
         return(

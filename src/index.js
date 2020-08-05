@@ -2,9 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import '../node_modules/react-modal-video/scss/modal-video.scss';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 import App from './App';
 import Mat from './Disciplinas/matematica';
 import Eng from './Disciplinas/engenharia';
+import Equipe from './Informacoes/Equipe/equipe';
+import Projeto from './Informacoes/Projeto/projeto';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -14,6 +19,8 @@ ReactDOM.render(
         <Route path="/" exact={true} component={App} />
         <Route path='/matematica' component={Mat}/>
         <Route path='/engenharia' component={Eng}/>
+        <Route path='/equipe' component={Equipe}/>
+        <Route path='/projeto' component={Projeto}/>
       </Switch>
     </BrowserRouter>        
   </React.StrictMode>,
