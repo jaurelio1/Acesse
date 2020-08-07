@@ -5,10 +5,16 @@ import { Link } from 'react-router-dom';
 
 import ModalVideo from 'react-modal-video';
 
+import Semirreta from './img/Semirreta.jpg';
+
+//Obs: Os videos so estao carregando quando estou logado na minha conta do Youtube
+//provavelmente tenho que deixar os vídeos públicos. Resolvo isso depois
 export default class Matematica extends Component{
     constructor(){
         super();
         this.state = {
+            mensagem: '',
+            imagem: '',
             isOpen: false,
             isOpenEx: false,
             isOpenPonto: false,
@@ -36,15 +42,47 @@ export default class Matematica extends Component{
                         <ModalVideo channel='youtube' isOpen={this.state.isOpenSegCon} videoId='5PNinV1UQ2Y' onClose={() =>this.setState({isOpenSegCon: false})}/>
                     </div>
                     <div className="links">
-                        <a href="#" onClick={() => this.setState({isOpenEx: true})}>Extremos do segmento</a>                    
-                        <a href="#"onClick={() => this.setState({isOpenSemi: true})}>Semirreta</a>                                     
-                        <a href="#" onClick={() => this.setState({isOpenRetCop: true})}>Retas coplanares</a>                                     
-                        <a href="#" onClick={() => this.setState({isOpenSegCol: true})}>Segmentos colineares</a>                                     
-                        <a href="#" onClick={() => this.setState({isOpenSegCon: true})}>Segmentos consecutivos</a>
+                        <a href="#" 
+                        onClick={() => this.setState({isOpenEx: true, mensagem:"Ola Mundo"})}>
+                            Extremos do segmento</a>                    
+                        <a href="#" 
+                        onClick={() => this.setState({isOpenSemi: true, 
+                        mensagem:"Parte de uma reta limitada por um ponto",
+                        imagem:Semirreta})}>
+                            Semirreta</a>                                     
+                        <a href="#" 
+                        onClick={() => this.setState({isOpenRetCop: true})}>
+                            Retas coplanares</a>                                     
+                        <a href="#" 
+                        onClick={() => this.setState({isOpenSegCol: true})}>
+                            Segmentos colineares</a>                                     
+                        <a href="#" 
+                        onClick={() => this.setState({isOpenSegCon: true})}>
+                            Segmentos consecutivos</a>
+                    </div>
+                    <div className="adicionais">                        
+                        <div id="input-definicao">
+                            <h6>Definição</h6>
+                           {this.state.mensagem}                            
+                        </div>
+                        <div id="image-definicao">
+                            <h6>Imagem</h6>
+                            <img src={this.state.imagem}/>
+                        </div>
+                    </div>
+                    <div className="manual">
+                        <h6>Como funciona?</h6>
+                        <p>Clique na palavra que deseja.<br/>
+                        Logo após, irá aparecer um video demonstrando <br/>
+                        o sinal e atrás do video <br/>
+                        estará definições formais sobre a palavra.
+                        </p>
                     </div>                                        
                 </div>
                 <Link to="/">Voltar</Link>                             
             </div>            
         );
     }
+    
 }
+

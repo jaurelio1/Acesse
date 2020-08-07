@@ -3,10 +3,9 @@
     height: 100vh;    
 }
 
-.videos .lista_videos .modals{
-    margin-left: 300px;
-    max-width: 480px;
-    max-height: 280px;       
+.videos .lista_videos{
+    display: flex;
+    flex-direction: row;
 }
 
 .videos .lista_videos a{
@@ -24,4 +23,30 @@
 .videos .lista_videos a:hover{
     background: lime;
     color: white;
+}
+
+.videos .lista_videos .manual{
+    margin-left: 500px;
+    max-width: 300px;
+    max-height: 150px;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+
+#input-definicao{
+    max-width: 280px;
+    max-height: 300px;
+    margin-left: 50px;
+    border: 1px solid black;
+    border-radius: 5px;    
+}
+
+#image-definicao{
+    padding-left: 2.5px;    
+    max-width: 280px;
+    margin-left: 50px;
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
 }

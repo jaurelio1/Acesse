@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 
@@ -11,13 +11,10 @@ const Body = () => {
     let state = {        
         nomes_disciplinas: ['Matematica', 'Engenharia'],
         sinais: [SinalMat, SinalEng], 
-    };
-    
-    const [dropdownOpen, setDropdownOpen ] = useState(false);
+    };    
     
     const {nomes_disciplinas, sinais} = state;
 
-    const toggle = () => setDropdownOpen(prevState => !prevState);
     return(
         <div className="body">
             <div>

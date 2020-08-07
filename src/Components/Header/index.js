@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { render } from '@testing-library/react';
+import React from 'react';
 import if_logo from './IF_logo.png';
 import './style.css';
 
