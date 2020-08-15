@@ -1,5 +1,5 @@
 .disciplinas{
-    max-width: 500px;
+    width: 500px;
     margin: 20px auto 0;
     padding: 20px;
     background: lightgreen;
@@ -23,8 +23,8 @@
 }
 
 .disciplinas .block-link img{
-    max-width: 90px;
-    max-height: 80px;
+    width: 90px;
+    height: 80px;
     padding-left: 2px;
 }
 .disciplinas p{

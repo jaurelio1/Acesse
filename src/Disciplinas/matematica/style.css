@@ -7,36 +7,70 @@
     display: flex;
     flex-direction: row;
 }
-
-.videos .lista_videos a{
-    max-width: 150px;
-    border: 1px solid lightgreen;
-    border-radius: 5px;
-    color: black;
-    padding: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
+.videos .lista_videos .scrollbox a{
+    color: black;    
+    padding-right: 5px;
+    font-size: 14px;
 }
 
-.videos .lista_videos a:hover{
-    background: lime;
+.videos .lista_videos .scrollbox a:hover{    
     color: white;
 }
 
+.videos .lista_videos .scrollbox {
+	float: left;
+    max-height: 150px;
+    margin: 1rem 2rem;
+    overflow: auto;
+    width: 250px;
+    border: 1px solid green;
+    border-radius: 5px;
+
+	background:
+		/* Shadow covers */
+		linear-gradient(lightgreen 30%, rgba(255,255,255,0)),
+		linear-gradient(rgba(255,255,255,0), lightgreen 70%) 0 100%,
+		
+		/* Shadows */
+		radial-gradient(50% 0, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
+		radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+	background:
+		/* Shadow covers */
+		linear-gradient(lightgreen 30%, rgba(255,255,255,0)),
+		linear-gradient(rgba(255,255,255,0), lightgreen 70%) 0 100%,
+		
+		/* Shadows */
+		radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
+		radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+	background-repeat: no-repeat;
+	background-color: lightgreen;
+	background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+	
+	/* Opera doesn’t support this in the shorthand */
+	background-attachment: local, local, scroll, scroll;
+}
+
 .videos .lista_videos .manual{
-    margin-left: 500px;
-    max-width: 300px;
+    margin-top: 1rem;
+    position: static;
+    background-color: lightgreen;
+    margin-left: 400px;
+    margin-right: 10px;
+    max-width: 350px;
     max-height: 150px;
     border: 1px solid green;
     border-radius: 5px;
 }
 
+.videos .lista_videos .adicionais{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
 
 #input-definicao{
-    max-width: 280px;
-    max-height: 300px;
+    width: 310px;
+    max-height: 135px;
     margin-left: 50px;
     border: 1px solid black;
     border-radius: 5px;    
@@ -44,7 +78,8 @@
 
 #image-definicao{
     padding-left: 2.5px;    
-    max-width: 280px;
+    width: 310px;
+    height: 205px;
     margin-left: 50px;
     margin-top: 15px;
     border: 1px solid black;

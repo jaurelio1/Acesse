@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom';
 
 import ModalVideo from 'react-modal-video';
 
+import DefExtSeg from './img/Def_ExtSeg.png';
+import DefSemi from './img/Def_semirreta.png';
+import DefRetCop from './img/Def_RetCop.png';
+import DefSegcol from './img/Def_SegCol.png';
+import DefSegcons from './img/Def_SegCons.png';
+
+
 import Semirreta from './img/Semirreta.jpg';
 
 //Obs: Os videos so estao carregando quando estou logado na minha conta do Youtube
@@ -13,7 +20,7 @@ export default class Matematica extends Component{
     constructor(){
         super();
         this.state = {
-            mensagem: '',
+            definicao: '',
             imagem: '',
             isOpen: false,
             isOpenEx: false,
@@ -40,33 +47,47 @@ export default class Matematica extends Component{
                         <ModalVideo channel='youtube' isOpen={this.state.isOpenRetCop} videoId='ENqo-qJ4Vq4' onClose={() =>this.setState({isOpenRetCop: false})}/>
                         <ModalVideo channel='youtube' isOpen={this.state.isOpenSegCol} videoId='yt8WEClckX8' onClose={() =>this.setState({isOpenSegCol: false})}/>
                         <ModalVideo channel='youtube' isOpen={this.state.isOpenSegCon} videoId='5PNinV1UQ2Y' onClose={() =>this.setState({isOpenSegCon: false})}/>
-                    </div>
-                    <div className="links">
-                        <a href="#" 
-                        onClick={() => this.setState({isOpenEx: true, mensagem:"Ola Mundo"})}>
-                            Extremos do segmento</a>                    
-                        <a href="#" 
-                        onClick={() => this.setState({isOpenSemi: true, 
-                        mensagem:"Parte de uma reta limitada por um ponto",
-                        imagem:Semirreta})}>
-                            Semirreta</a>                                     
-                        <a href="#" 
-                        onClick={() => this.setState({isOpenRetCop: true})}>
-                            Retas coplanares</a>                                     
-                        <a href="#" 
-                        onClick={() => this.setState({isOpenSegCol: true})}>
-                            Segmentos colineares</a>                                     
-                        <a href="#" 
-                        onClick={() => this.setState({isOpenSegCon: true})}>
-                            Segmentos consecutivos</a>
-                    </div>
+                    </div>                    
+                    <ol className="scrollbox">
+                        <li>
+                            <a href="#" 
+                            onClick={() => this.setState({isOpenEx: true, 
+                            definicao:DefExtSeg})}>
+                                Extremos do segmento</a>
+                        </li>
+                        <li>
+                            <a href="#" 
+                            onClick={() => this.setState({isOpenSemi: true, 
+                            definicao:DefSemi,
+                            imagem:Semirreta})}>
+                                Semirreta</a>
+                        </li>
+                        <li>
+                            <a href="#" 
+                            onClick={() => this.setState({isOpenRetCop: true,
+                            definicao:DefRetCop})}>
+                                Retas coplanares</a>
+                        </li>
+                        <li>
+                            <a href="#" 
+                            onClick={() => this.setState({isOpenSegCol: true,
+                            definicao:DefSegcol})}>
+                                Segmentos colineares</a>
+                        </li>
+                        <li>
+                            <a href="#" 
+                            onClick={() => this.setState({isOpenSegCon: true,
+                            definicao:DefSegcons})}>
+                                Segmentos consecutivos</a>
+                        </li>                        
+                    </ol>                   
                     <div className="adicionais">                        
                         <div id="input-definicao">
-                            <h6>Definição</h6>
-                           {this.state.mensagem}                            
+                            <span>Definição</span>
+                            <img src={this.state.definicao} />                           
                         </div>
                         <div id="image-definicao">
-                            <h6>Imagem</h6>
+                            <span>Imagem</span>
                             <img src={this.state.imagem}/>
                         </div>
                     </div>
