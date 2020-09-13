@@ -6,7 +6,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App';
 import Mat from './Disciplinas/matematica';
-import Eng from './Disciplinas/engenharia';
+import Fis from './Disciplinas/fisica';
 import Equipe from './Informacoes/Equipe/equipe';
 import Projeto from './Informacoes/Projeto/projeto';
 
@@ -18,7 +18,7 @@ ReactDOM.render(
       <Switch>
         <Route path="/" exact={true} component={App} />
         <Route path='/matematica' component={Mat}/>
-        <Route path='/engenharia' component={Eng}/>
+        <Route path='/engenharia' component={Fis}/>
         <Route path='/equipe' component={Equipe}/>
         <Route path='/projeto' component={Projeto}/>
       </Switch>

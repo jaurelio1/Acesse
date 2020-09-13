@@ -22,13 +22,10 @@ export default class Matematica extends Component{
         this.state = {
             definicao: '',
             imagem: '',
+            videoId: '',
             isOpen: false,
-            isOpenEx: false,
-            isOpenPonto: false,
-            isOpenRetCop: false,
-            isOpenSemi: false,
-            isOpenSegCol: false,
-            isOpenSegCon: false,
+            palavras:['Cubo', 'Extremos do Segmento', 'Semirreta', 'Retas coplanares', 'Segmentos colineares', 'Segmentos consecutivos'],
+            videosLinks: [ 'VvgeQnOnuzA', 'Pr-YhkAZjFQ', 'JFddwusHU2E', 'ENqo-qJ4Vq4', 'yt8WEClckX8', '5PNinV1UQ2Y'],
         }
         this.openModal = this.openModal.bind(this);
     }
@@ -42,53 +39,35 @@ export default class Matematica extends Component{
             <div className="videos">                
                 <div className="lista_videos">
                     <div className='modals'>
-                        <ModalVideo channel='youtube' isOpen={this.state.isOpenEx} videoId='Pr-YhkAZjFQ' onClose={() =>this.setState({isOpenEx: false})}/>
-                        <ModalVideo channel='youtube' isOpen={this.state.isOpenSemi} videoId='JFddwusHU2E' onClose={() =>this.setState({isOpenSemi: false})}/>
-                        <ModalVideo channel='youtube' isOpen={this.state.isOpenRetCop} videoId='ENqo-qJ4Vq4' onClose={() =>this.setState({isOpenRetCop: false})}/>
-                        <ModalVideo channel='youtube' isOpen={this.state.isOpenSegCol} videoId='yt8WEClckX8' onClose={() =>this.setState({isOpenSegCol: false})}/>
-                        <ModalVideo channel='youtube' isOpen={this.state.isOpenSegCon} videoId='5PNinV1UQ2Y' onClose={() =>this.setState({isOpenSegCon: false})}/>
+                        <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId={this.state.videoId} onClose={() =>this.setState({isOpen: false})}/>
                     </div>                    
                     <ol className="scrollbox">
-                        <li>
-                            <a href="#" 
-                            onClick={() => this.setState({isOpenEx: true, 
-                            definicao:DefExtSeg})}>
-                                Extremos do segmento</a>
-                        </li>
-                        <li>
-                            <a href="#" 
-                            onClick={() => this.setState({isOpenSemi: true, 
-                            definicao:DefSemi,
-                            imagem:Semirreta})}>
-                                Semirreta</a>
-                        </li>
-                        <li>
-                            <a href="#" 
-                            onClick={() => this.setState({isOpenRetCop: true,
-                            definicao:DefRetCop})}>
-                                Retas coplanares</a>
-                        </li>
-                        <li>
-                            <a href="#" 
-                            onClick={() => this.setState({isOpenSegCol: true,
-                            definicao:DefSegcol})}>
-                                Segmentos colineares</a>
-                        </li>
-                        <li>
-                            <a href="#" 
-                            onClick={() => this.setState({isOpenSegCon: true,
-                            definicao:DefSegcons})}>
-                                Segmentos consecutivos</a>
-                        </li>                        
+                        <h6><u>Palavras</u></h6>                            
+                        {this.state.videosLinks.map((link, indice) =>                               
+                            (
+                                <article key={indice}>
+                                {console.log(link)}
+                                    <li>
+                                        <a href="#"
+                                        onClick={() => this.setState({isOpen:true,
+                                            videoId:link})}>
+                                            {this.state.palavras[indice]}</a> 
+                                    </li>                                                                      
+                                </article>
+                            )
+                        )}                                                                     
                     </ol>                   
                     <div className="adicionais">                        
                         <div id="input-definicao">
-                            <span>Definição</span>
+                            <span>Definição - Português</span>
                             <img src={this.state.definicao} />                           
                         </div>
                         <div id="image-definicao">
                             <span>Imagem</span>
                             <img src={this.state.imagem}/>
+                        </div>
+                        <div id="mao-definicao">
+                            <span>Mão</span>
                         </div>
                     </div>
                     <div className="manual">
@@ -103,7 +82,5 @@ export default class Matematica extends Component{
                 <Link to="/">Voltar</Link>                             
             </div>            
         );
-    }
-    
+    }    
 }
-

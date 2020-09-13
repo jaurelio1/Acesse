@@ -1,6 +1,7 @@
 .disciplinas{
     width: 500px;
-    margin: 20px auto 0;
+    position: absolute;
+    left: 450px;
     padding: 20px;
     background: lightgreen;
     border-radius: 5px;
@@ -35,10 +36,49 @@
     line-height: 24px;
 }
 
-.body .dropdown{
+.body .links-informacoes{
     margin-left: 100px;
+    padding-left: 2px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid green;
     border-radius: 5px;
-    max-width: 130px;
-    background:lightgreen;
+    width: 100px;
+}
+
+.body .links-informacoes a{
+    color: black;
+    font-size: 16px;
+}
+
+.body .links-informacoes a:hover{
+    color: white;
+}
+
+.info{
+    position: relative;
+    left: 280px;
+    display: flex;
+}
+.info a{
+    font-size: 18px;
+    color: black;
+}
+.info a:hover{
+    color: white;
+}
+
+.info .equipe{
+    border: 1px solid green;
+    border-radius: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background: lightgreen;
+}
+.info .projeto{
+    border: 1px solid green;
+    border-radius: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background: lightgreen;
 }

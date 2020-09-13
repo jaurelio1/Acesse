@@ -63,6 +63,8 @@
 }
 
 .videos .lista_videos .adicionais{
+    position: relative;
+    left: 150px;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -84,4 +86,13 @@
     margin-top: 15px;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+#mao-definicao{
+    margin-top: 15px;
+    width: 310px;
+    max-height: 135px;
+    margin-left: 50px;
+    border: 1px solid black;
+    border-radius: 5px;    
 }
