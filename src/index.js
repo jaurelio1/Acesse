@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import '../node_modules/react-modal-video/scss/modal-video.scss';
+//import '../node_modules/react-modal-video/scss/modal-video.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App';
