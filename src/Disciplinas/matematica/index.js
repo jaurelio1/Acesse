@@ -39,23 +39,28 @@ export default class Matematica extends Component{
     render(){
         return(
             <div className="videos">                
-                <div className="lista_videos">                                        
-                    <ol className="scrollbox">
-                        <h6><u>Palavras</u></h6>                            
-                        {this.state.videosLinks.map((link, indice) =>                               
-                            (
-                                <article key={indice}>
-                                    <li>
-                                        <a href="#"
-                                        onClick={() => this.setState({isOpen:true,
-                                            definicao: this.state.definicoes[indice],
-                                            videoId:link})}>
-                                            {this.state.palavras[indice]}</a> 
-                                    </li>                                                                      
-                                </article>
-                            )
-                        )}                                                                     
-                    </ol>
+                <div className="lista_videos">  
+                    <div className="sinal-palavra">
+                        <ol className="scrollbox">
+                            <h6><u>Palavras</u></h6>                            
+                            {this.state.videosLinks.map((link, indice) =>                               
+                                (
+                                    <article key={indice}>
+                                        <li>
+                                            <a href="#"
+                                            onClick={() => this.setState({isOpen:true,
+                                                definicao: this.state.definicoes[indice],
+                                                videoId:link})}>
+                                                {this.state.palavras[indice]}</a> 
+                                        </li>                                                                      
+                                    </article>
+                                )
+                            )}                                                                     
+                        </ol>
+                        <div className="sinal_mao">
+                            <button><Link to='sinal_de_mao'>Sinal de Mão</Link></button>                                                
+                        </div>                                                 
+                    </div>
                     <div className="adicionais">
                         <div>                        
                             <div id="input-definicao">

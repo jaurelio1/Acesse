@@ -1,0 +1,28 @@
+body{
+    background-color: green;
+    height: 100vh;
+}
+.block{
+    margin: 200px 500px;
+}
+
+.block .container-body{
+    width: 320px;
+    border: 1px solid lightgreen;
+    display: flex;
+    flex-direction: row;
+    padding-right: 15px;
+}
+
+.block .container-body .linha1{
+    padding-right: 50px;
+}
+.block .container-body .linha2{
+    padding-right: 50px;
+}
+.block .container-body .linha3{
+    padding-right: 50px;
+}
+.block .container-body .linha4{
+    padding-right: 50px;
+}

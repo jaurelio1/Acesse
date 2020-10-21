@@ -17,7 +17,16 @@
     color: white;
 }
 
-.videos .lista_videos .scrollbox {
+.videos .lista_videos .sinal-palavra{    
+    display: flex;
+    flex-direction: column;
+}
+
+.videos .lista_videos .sinal-palavra .sinal_mao{
+    margin: 1rem 5rem;
+}
+
+.videos .lista_videos .sinal-palavra .scrollbox {
 	float: left;
     max-height: 150px;
     margin: 1rem 2rem;

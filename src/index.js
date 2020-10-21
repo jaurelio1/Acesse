@@ -9,6 +9,8 @@ import Mat from './Disciplinas/matematica';
 import Fis from './Disciplinas/fisica';
 import Equipe from './Informacoes/Equipe/equipe';
 import Projeto from './Informacoes/Projeto/projeto';
+import SinalMao from './Sinal_Mao/index';
+import MatSinal from './Sinal_Mao/Mat/MatSinal';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -21,6 +23,8 @@ ReactDOM.render(
         <Route path='/engenharia' component={Fis}/>
         <Route path='/equipe' component={Equipe}/>
         <Route path='/projeto' component={Projeto}/>
+        <Route path='/sinal_de_mao' component={SinalMao}/>
+        <Route path='/matsinal' component={MatSinal}/>
       </Switch>
     </BrowserRouter>        
   </React.StrictMode>,
