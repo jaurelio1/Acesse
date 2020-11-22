@@ -21,7 +21,6 @@ const Body = () => {
                     return (
                         <article key={indice}>
                             <div className="block-link">
-                                {console.log(disciplina)}
                                 <Link to={`/${disciplina}`}>
                                     <img src={sinais[indice]}/>
                                     <p>

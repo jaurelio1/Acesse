@@ -59,18 +59,6 @@
 	background-attachment: local, local, scroll, scroll;
 }
 
-.videos .lista_videos .manual{
-    margin-top: 1rem;
-    position: static;
-    background-color: lightgreen;
-    margin-left: 400px;
-    margin-right: 10px;
-    max-width: 350px;
-    height: 175px;
-    border: 1px solid green;
-    border-radius: 5px;
-    padding-left: 5px;
-}
 
 .videos .lista_videos .adicionais{
     position: relative;
@@ -124,6 +112,9 @@
     border: 1px solid black;
     border-radius: 5px;
     background: white;
+}
+#image-definicao img{
+    padding-top: 25px;
 }
 
 #mao-definicao{

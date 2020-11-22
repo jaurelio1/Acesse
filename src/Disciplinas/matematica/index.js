@@ -12,8 +12,7 @@ import DefRetCop from './img/Def_RetCop.png';
 import DefSegcol from './img/Def_SegCol.png';
 import DefSegcons from './img/Def_SegCons.png';
 
-
-import Semirreta from './img/Semirreta.jpg';
+import Semirreta from './img/Semirreta.png';
 
 //Obs: Os videos so estao carregando quando estou logado na minha conta do Youtube
 //provavelmente tenho que deixar os vídeos públicos. Resolvo isso depois
@@ -22,7 +21,7 @@ export default class Matematica extends Component{
         super();
         this.state = {
             definicao: '',
-            imagem: '',
+            imagem: '', 
             videoId: '',
             isOpen: false,
             definicoes: [DefCubo, DefExtSeg, DefSemi, DefRetCop, DefSegcol, DefSegcons],
