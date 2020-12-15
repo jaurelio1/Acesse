@@ -1,20 +1,14 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
-import './style.css';
-import { Link } from 'react-router-dom';
+import DefCubo from '../img/Def_Cubo.png';
+import DefExtSeg from '../img/Def_ExtSeg.png';
+import DefSemi from '../img/Def_semirreta.png';
+import DefRetCop from '../img/Def_RetCop.png';
+import DefSegcol from '../img/Def_SegCol.png';
+import DefSegcons from '../img/Def_SegCons.png';
 
-import DefCubo from './img/Def_Cubo.png';
-import DefExtSeg from './img/Def_ExtSeg.png';
-import DefSemi from './img/Def_semirreta.png';
-import DefRetCop from './img/Def_RetCop.png';
-import DefSegcol from './img/Def_SegCol.png';
-import DefSegcons from './img/Def_SegCons.png';
-
-import Semirreta from './img/Semirreta.png';
-
-//Obs: Os videos so estao carregando quando estou logado na minha conta do Youtube
-//provavelmente tenho que deixar os vídeos públicos. Resolvo isso depois
-export default class Matematica extends Component{
+export default class Filtro extends Component{
     constructor(){
         super();
         this.state = {
@@ -23,15 +17,31 @@ export default class Matematica extends Component{
             videoId: '',
             isOpen: false,
             definicoes: [DefCubo, DefExtSeg, DefSemi, DefRetCop, DefSegcol, DefSegcons],
-            palavras:['Cubo', 'Extremos do Segmento', 'Semirreta', 'Retas coplanares', 'Segmentos colineares', 'Segmentos consecutivos'],
+            palavras : ['Cubo', 'Extremos do Segmento', 'Semirreta', 'Retas coplanares', 'Segmentos colineares', 'Segmentos consecutivos'],
             videosLinks: [ 'VvgeQnOnuzA', 'Pr-YhkAZjFQ', 'JFddwusHU2E', 'ENqo-qJ4Vq4', 'yt8WEClckX8', '5PNinV1UQ2Y'],
-        }
-        this.openModal = this.openModal.bind(this);
+        };
+        this.letra = sessionStorage.getItem("letra");
     }
     
     openModal(){
         this.setState({isOpen: true});
-    }   
+    }
+
+    filtroDePalavras = (query) =>{
+        return this.state.palavras.filter(el => el[0].toLowerCase() === query.toLowerCase());
+    }
+    
+    indicePalavrasFiltradas = () =>{
+        let indice = []
+        for(let i = 0; i < this.filtroDePalavras(this.letra).length; i++){
+            for(let j = 0; j < this.state.palavras.length; j++){
+                if(this.filtroDePalavras(this.letra)[i] === this.state.palavras[j]){
+                    indice.push(j);
+                }                
+            }
+        }
+        return indice;
+    }
 
     render(){
         return(
@@ -40,15 +50,16 @@ export default class Matematica extends Component{
                     <div className="sinal-palavra">
                         <ol className="scrollbox">
                             <h6><u>Palavras</u></h6>                            
-                            {this.state.videosLinks.map((link, indice) =>                               
+                            {this.filtroDePalavras(this.letra).map((letra, indice) =>                               
                                 (
                                     <article key={indice}>
                                         <li>
                                             <a href="#"
                                             onClick={() => this.setState({isOpen:true,
-                                                definicao: this.state.definicoes[indice],
-                                                videoId:link})}>
-                                                {this.state.palavras[indice]}</a> 
+                                                videoId:this.state.videosLinks[this.indicePalavrasFiltradas()[indice]]})}>
+                                                {letra}
+                                                {console.log(this.indicePalavrasFiltradas())}
+                                            </a>                                                 
                                         </li>                                                                      
                                     </article>
                                 )
@@ -85,8 +96,8 @@ export default class Matematica extends Component{
                         </div>
                     </div>                                                            
                 </div>
-                <Link to="/">Voltar</Link>                             
+                <Link to="/sinal_de_mao">Voltar</Link>                             
             </div>            
         );
-    }    
+    }
 }

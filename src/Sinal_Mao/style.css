@@ -1,16 +1,22 @@
 .block{
-    margin: 200px 500px;
+    margin: 200px 500px;    
 }
 
 .block .container-body{
-    width: 320px;
+    width: 400px;
     border: 1px solid lightgreen;
     display: flex;
     flex-direction: row;
     padding-right: 15px;
 }
 
+.botao-filtro{
+    width: 30px;    
+    margin-bottom: 5px;
+}
+
 .block .container-body .linha1{
+    padding-left: 10px;
     padding-right: 50px;
 }
 .block .container-body .linha2{

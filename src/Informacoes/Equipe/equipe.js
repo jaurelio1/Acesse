@@ -71,7 +71,7 @@ const Equipe = () =>(
         <hr/>
 
         <h5>Cicero da Silva Pereira</h5>
-        <h6>Docente COlaborador</h6>
+        <h6>Docente Colaborador</h6>
         <p align="justify">
         Possui graduação em LICENCIATURA PLENA EM MATEMÁTICA pela Universidade <br/>
         Estadual da Paraíba (1997). Especialista em Ensino de Matemática Básica e Mestre <br/>

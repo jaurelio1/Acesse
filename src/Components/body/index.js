@@ -13,7 +13,7 @@ const Body = () => {
     };    
     
     const {nomes_disciplinas, sinais} = state;
-
+    
     return(
         <div className="body">
             <div className='disciplinas'>
@@ -26,7 +26,7 @@ const Body = () => {
                                     <p>
                                         {disciplina}
                                     </p>
-                                </Link>
+                                </Link>                             
                             </div>                        
                         </article>
                         );                    
