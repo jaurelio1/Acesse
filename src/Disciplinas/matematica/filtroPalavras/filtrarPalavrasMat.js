@@ -17,8 +17,22 @@ export default class Filtro extends Component{
             videoId: '',
             isOpen: false,
             definicoes: [DefCubo, DefExtSeg, DefSemi, DefRetCop, DefSegcol, DefSegcons],
-            palavras : ['Cubo', 'Extremos do Segmento', 'Semirreta', 'Retas coplanares', 'Segmentos colineares', 'Segmentos consecutivos'],
-            videosLinks: [ 'VvgeQnOnuzA', 'Pr-YhkAZjFQ', 'JFddwusHU2E', 'ENqo-qJ4Vq4', 'yt8WEClckX8', '5PNinV1UQ2Y'],
+            palavras:['Aresta', 'Cilindro Oblíquo', 'Cilindro Reto', 'Cone', 'Corpos Redondos', 
+            'Cubo', 'Dodecaedro Regular', 'Extremos do Segmento', 'Face', 'Hexaedro Regular', 'Icosaedro Regular',
+            'Octaedro Regular', 'Lado do Polígono', 'Paralelepípedo', 'Pirâmide', 'Pirâmide Triangular', 'Pirâmide Quadrangular',
+            'Pirâmide Pentagonal', 'Pirâmide Hexagonal', 'Planificação', 'Poliedro' , 'Poliedro Convexo', 'Poliedro Não Convexo',
+            'Poliedro Regular', 'Prisma', 'Prisma Oblíquo', 'Ponto',
+            'Prisma Reto', 'Prisma Triangular', 'Prisma Quadrangular', 'Prisma Pentagonal', 'Prisma Hexagonal', 'Polígono Convexo',
+            'Polígono Não Convexo', 'Polígono Regular', 'Retas Coincidentes', 'Retas Concorrentes', 'Retas Reversas', 'Retas Coplanares',
+            'Semirreta', 'Segmentos Consecutivos', 'Segmentos Colineares', 'Sólido Geométrico', 'Tetraedro Regular', 'Vértice'],
+            videosLinks: ['kLivrgB7GY4', 'BR87VA8suLA', '434Yxk7a1cU', 'wGXYAkiOzHE', 'ErnpQhCW_Gg', 
+            'VvgeQnOnuzA', 'Q7yKMW8h2sQ', 'Pr-YhkAZjFQ', 'KowqEilzgcs', '7h_KCmEX8qw', 'dws1IxL5N-E',
+            'Ebyvi7ldonY', 'icXI3K47x-0', 'WaGMewRkBK0', 'h-gQQDDYLFU', '8C77EhDj6zQ', 'RvvqlgBu7EI',
+            'ZPj4MIBs4o0', '4K1-AnvG61g', 'UUcIgERXgl0', '5Pr_Yx1XXCc', 'p8w0jOPdxoM', '6_SmMUgFyNc',
+            'pYsYZEReuTI', 'CA1SlAWQhhY', 'G1AlE5eZSe4', 'COzxLCg2lv4',
+            'qhT-B3Xqhss', 'kvu0Caqz2j8', 'XSQHMakMOKE', 'hliL7RBDDgU', 'WR2Or3vBP5w', 'Xv1wjLx1byQ',
+            '0d_Ww7-3JCY', 'tr-chQnhbsY', 'JHR0bxAAHnI', 'jnFqUP9Dq8A', 'YB_o0jcubbQ', 'ENqo-qJ4Vq4',
+            'JFddwusHU2E', '5PNinV1UQ2Y', 'yt8WEClckX8', 'C3NPaUeVYAo', 'C3NPaUeVYAo', 'CuxsuvuCJCU'],
         };
         this.letra = sessionStorage.getItem("letra");
     }
@@ -27,10 +41,14 @@ export default class Filtro extends Component{
         this.setState({isOpen: true});
     }
 
+    //cria a lista da palavras filtradas
     filtroDePalavras = (query) =>{
         return this.state.palavras.filter(el => el[0].toLowerCase() === query.toLowerCase());
     }
     
+    /*como a lista palavras vai ser maior que a lista de palavras filtradas,
+    essa função serve para achar os indíces das palavras filtradas e os armazena em uma lista
+    */
     indicePalavrasFiltradas = () =>{
         let indice = []
         for(let i = 0; i < this.filtroDePalavras(this.letra).length; i++){
@@ -43,6 +61,7 @@ export default class Filtro extends Component{
         return indice;
     }
 
+    //definicao: this.state.definicoes[this.indicePalavrasFiltradas()[indice]],
     render(){
         return(
             <div className="videos">                

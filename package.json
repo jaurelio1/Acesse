@@ -7,14 +7,15 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-player": "^2.5.0",
+    "react-dom": "^16.14.0",
+    "react-player": "^2.7.2",
     "react-prism": "^4.3.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-script": "^2.0.5",
+    "react-scripts": "^3.4.4",
     "react.video": "^1.0.14",
-    "reactstrap": "^8.5.1"
+    "reactstrap": "^8.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
