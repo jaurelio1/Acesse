@@ -3,28 +3,26 @@
     position: absolute;
     left: 450px;
     padding: 20px;
-    background: lightgreen;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+    background: #0A5517;
     display: flex;
     flex-direction: row;    
 }
 
 .disciplinas .block-link{
-    background: green;
-    border: 1px solid #DDD;
-    border-radius: 5px;
+    background: #0A5517;
+    border: 1px solid #6AB734;
     padding: 20px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
+    margin-left: 5px;    
     align-items: center;  
 }
 .disciplinas .block-link:hover{
-    background-color: lime;
+    background-color: #6AB734;
     cursor: pointer;
 }
 
 .disciplinas .block-link img{
-    width: 90px;
+    width: 125px;
     height: 80px;
     padding-left: 2px;
 }
@@ -62,23 +60,28 @@
 }
 .info a{
     font-size: 18px;
-    color: black;
+    color: #84CD4F;
 }
 .info a:hover{
-    color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #6AB734;
 }
 
 .info .equipe{
-    border: 1px solid green;
+    border: 1px solid #0A5517;
     border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     padding-left: 2px;
     padding-right: 2px;
-    background: lightgreen;
+    background: #0A5517;
 }
 .info .projeto{
-    border: 1px solid green;
+    border: 1px solid #0A5517;
     border-radius: 5px;
+    margin-bottom: 5px;
     padding-left: 2px;
     padding-right: 2px;
-    background: lightgreen;
+    background: #0A5517;
 }

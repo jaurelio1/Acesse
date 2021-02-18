@@ -7,12 +7,17 @@ import './style.css';
 const Main = () =>(
     <div className='main'>
         <div className='head'>
-            <Head />
+            <div>
+                <Head />
+            </div>
+            <div>
+                <Info />
+            </div>
         </div>
-        <div className='info'>
-            <Info />
-        </div>
-        <div>
+        {/* <div className='info'>
+            
+        </div> */}
+        <div className="body">
             <Body />
         </div>                
     </div>

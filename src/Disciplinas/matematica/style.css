@@ -1,5 +1,5 @@
 .videos{
-    background-color: limegreen;
+    background-color: #0A5517;
     height: 100vh;    
 }
 
@@ -33,26 +33,26 @@
     overflow: auto;
     width: 250px;
     border: 1px solid green;
-    border-radius: 5px;
+    border-radius: 10px;
 
 	background:
 		/* Shadow covers */
-		linear-gradient(lightgreen 30%, rgba(255,255,255,0)),
-		linear-gradient(rgba(255,255,255,0), lightgreen 70%) 0 100%,
+		linear-gradient(#6AB734 30%, rgba(255,255,255,0)),
+		linear-gradient(rgba(255,255,255,0), #6AB734 70%) 0 100%,
 		
 		/* Shadows */
 		radial-gradient(50% 0, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
 		radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
 	background:
 		/* Shadow covers */
-		linear-gradient(lightgreen 30%, rgba(255,255,255,0)),
-		linear-gradient(rgba(255,255,255,0), lightgreen 70%) 0 100%,
+		linear-gradient(#6AB734 30%, rgba(255,255,255,0)),
+		linear-gradient(rgba(255,255,255,0), #6AB734 70%) 0 100%,
 		
 		/* Shadows */
 		radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
 		radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
 	background-repeat: no-repeat;
-	background-color: lightgreen;
+	background-color: #6AB734;
 	background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
 	
 	/* Opera doesn’t support this in the shorthand */
@@ -71,11 +71,11 @@
 
 .videos .lista_videos .adicionais .modals{
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     padding-left: 2px;
     margin-left: 50px;
     margin-top: 15px;
-    background: white;
+    background: #6AB734;
     display: flex;
     flex-direction: column;
     
@@ -90,7 +90,7 @@
     margin-left: 50px;
     border: 1px solid black;
     border-radius: 5px;
-    background: white;    
+    background: #6AB734;    
 }
 
 #input-def-lib{
@@ -100,7 +100,7 @@
     margin-left: 50px;
     border: 1px solid black;
     border-radius: 5px;
-    background: white;
+    background: #6AB734;
 }
 
 #image-definicao{
@@ -111,7 +111,7 @@
     margin-top: 15px;
     border: 1px solid black;
     border-radius: 5px;
-    background: white;
+    background: #6AB734;
 }
 #image-definicao img{
     padding-top: 25px;
@@ -125,6 +125,6 @@
     margin-left: 50px;
     border: 1px solid black;
     border-radius: 5px;
-    background: white;    
+    background: #6AB734;    
 }
 
