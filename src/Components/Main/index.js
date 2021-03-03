@@ -14,9 +14,6 @@ const Main = () =>(
                 <Info />
             </div>
         </div>
-        {/* <div className='info'>
-            
-        </div> */}
         <div className="body">
             <Body />
         </div>                

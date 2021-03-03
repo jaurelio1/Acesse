@@ -14,6 +14,7 @@ const Alfa = () =>{
     }
     return(
     <div className="block">
+            <Link to="/" id="home">Home</Link>
             <div class="container-body">                            
                 <div class="linha1">
                     {linha1.map((letra1, indice1)=>(
@@ -51,7 +52,7 @@ const Alfa = () =>{
                     ))}                  
                 </div>                                   
             </div>
-            <Link to="/matematica">Voltar</Link>                
+            <Link to="/matematica" id="voltar">Voltar</Link>                
         </div>
     );
 }

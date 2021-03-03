@@ -95,7 +95,8 @@ export default class Matematica extends Component{
 
     render(){
         return(
-            <div className="videos">                
+            <div className="videos">
+                <Link to="/" id="home">Home</Link>                
                 <div className="lista_videos">  
                     <div className="sinal-palavra">
                         <ol className="scrollbox">
@@ -145,7 +146,7 @@ export default class Matematica extends Component{
                         </div>
                     </div>                                                            
                 </div>
-                <Link to="/">Voltar</Link>                             
+                <Link to="/" id="voltar">Voltar</Link>                             
             </div>            
         );
     }    

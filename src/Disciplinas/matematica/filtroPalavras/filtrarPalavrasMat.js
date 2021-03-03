@@ -110,7 +110,8 @@ export default class Filtro extends Component{
     //definicao: this.state.definicoes[this.indicePalavrasFiltradas()[indice]],
     render(){
         return(
-            <div className="videos">                
+            <div className="videos">
+                <Link to="/" id="home">Home</Link>                
                 <div className="lista_videos">  
                     <div className="sinal-palavra">
                         <ol className="scrollbox">
@@ -162,7 +163,7 @@ export default class Filtro extends Component{
                         </div>
                     </div>                                                            
                 </div>
-                <Link to="/sinal_de_mao">Voltar</Link>                             
+                <Link to="/sinal_de_mao" id="voltar">Voltar</Link>                             
             </div>            
         );
     }
