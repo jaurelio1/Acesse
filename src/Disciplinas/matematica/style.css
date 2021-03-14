@@ -1,4 +1,7 @@
 .videos{
+    background-image: url(../../Components/Main/img/IMG_6474-1024x683.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #0A5517;
     height: 100vh;    
 }
@@ -14,7 +17,7 @@
 }
 
 .videos .lista_videos .scrollbox a:hover{    
-    color: white;
+    color: blue;
 }
 
 .videos .lista_videos .sinal-palavra{    
@@ -32,7 +35,7 @@
     margin: 1rem 2rem;
     overflow: auto;
     width: 250px;
-    border: 1px solid green;
+    border: 1px solid #000;
     border-radius: 10px;
 
 	background:
@@ -45,14 +48,14 @@
 		radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
 	background:
 		/* Shadow covers */
-		linear-gradient(#6AB734 30%, rgba(255,255,255,0)),
-		linear-gradient(rgba(255,255,255,0), #6AB734 70%) 0 100%,
+		linear-gradient(#FFFF 30%, rgba(255,255,255,0)),
+		linear-gradient(rgba(255,255,255,0), #FFFF 70%) 0 100%,
 		
 		/* Shadows */
 		radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
 		radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
 	background-repeat: no-repeat;
-	background-color: #6AB734;
+	background-color: #FFFF;
 	background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
 	
 	/* Opera doesn’t support this in the shorthand */

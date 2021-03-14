@@ -20,7 +20,7 @@ ReactDOM.render(
       <Switch>
         <Route path="/" exact={true} component={App} />
         <Route path='/matematica' component={Mat}/>
-        <Route path='/engenharia' component={Fis}/>
+        <Route path='/fisica' component={Fis}/>
         <Route path='/equipe' component={Equipe}/>
         <Route path='/projeto' component={Projeto}/>
         <Route path='/sinal_de_mao' component={Alfa}/>

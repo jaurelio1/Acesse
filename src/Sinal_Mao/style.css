@@ -1,14 +1,17 @@
 .block{
+    background-image: url(../Components/Main/img/IMG_6474-1024x683.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #0A5517;
-    height: 100vh;
     display: flex;
     flex-direction: column;    
 }
 
 .block .container-body{
-    width: 400px;
-    background-color: #6AB734;
-    border: 1px solid #6AB734;
+    width: 440px;
+    background-color: #FFFF;
+    border: 1px solid #000;
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
     padding-right: 15px;
@@ -24,14 +27,41 @@
 
 .block .container-body .linha1{
     padding-left: 10px;
-    padding-right: 50px;
+    padding-right: 10px;
+    padding-top: 5px;
 }
+.block .container-body .linha1 img{
+    border: 1px solid #000;
+}
+
 .block .container-body .linha2{
-    padding-right: 50px;
+    padding-right: 10px;
+    padding-top: 5px;    
+}
+.block .container-body .linha2 img{
+    border: 1px solid #000;
 }
 .block .container-body .linha3{
-    padding-right: 50px;
+    padding-right: 10px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.block .container-body .linha3 img{
+    border: 1px solid #000;
 }
 .block .container-body .linha4{
-    padding-right: 50px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+.block .container-body .linha4 img{
+    border: 1px solid #000;
+}
+
+.block .container-body .linha5{
+    padding-right: 10px;
+    padding-top: 5px;
+}
+.block .container-body .linha5 img{
+    border: 1px solid #000;
 }

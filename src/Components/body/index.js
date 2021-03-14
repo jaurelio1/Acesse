@@ -15,7 +15,7 @@ const Body = () => {
     const {nomes_disciplinas, sinais} = state;
     
     return(
-        <div className="body">
+        <div className="body">            
             <div className='disciplinas'>
                 {nomes_disciplinas.map(function(disciplina, indice){
                     return (

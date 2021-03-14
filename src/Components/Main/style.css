@@ -1,6 +1,4 @@
 .main .head{
-    background-color: #0A5517;
-    width: 200vh;
     padding-top: 15px;
     padding-bottom: 125px;
     display: flex;
@@ -8,7 +6,10 @@
 }
 
 .main{
+    background-image: url(./img/IMG_6474-1024x683.jpeg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;        
     background-color: #6AB734;
-    height: 100vh;
-    width: 200vh;
+    height: 800px;
 }
