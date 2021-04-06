@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom';
 import ImagensDef from './imagensDef';
 import VideoLinks from './videoLinks';
 import ScrollBox from './scrollbox';
+import GetImagem from '../../Sinal_Mao/imagens';
 
 export default class Matematica extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             definicao: '',
-            letra: '', //session.getItem('letra')
+            letra: sessionStorage.getItem('letra'), 
             imagem: '',
             isOpen: false,
             palavras:['Aresta', 'Cilindro Oblíquo', 'Cilindro Reto', 'Cone', 'Corpos Redondos', 
@@ -24,6 +25,7 @@ export default class Matematica extends Component{
             'Semirreta', 'Segmentos Consecutivos', 'Segmentos Colineares', 'Sólido Geométrico', 'Tetraedro Regular', 'Vértice'],            
         }
         this.openModal = this.openModal.bind(this);
+        this.palavrasFiltradas = [];
     }
 
     //cria a lista da palavras filtradas
@@ -46,7 +48,17 @@ export default class Matematica extends Component{
         return indice;
     }
 
-    retornaPalavra(palavra){
+    verificarEhFiltrado(){
+        if(sessionStorage.getItem('ehFiltrado') === 'true'){            
+            this.palavrasFiltradas = this.filtroDePalavras(sessionStorage.getItem('letra'));
+            return this.palavrasFiltradas;
+        }
+        else{
+            return this.state.palavras;
+        }        
+    }
+
+    retornaPalavraScrollBox(palavra){
         this.setState({definicao: palavra});
         console.log(this.state.definicao);
     }    
@@ -58,10 +70,10 @@ export default class Matematica extends Component{
     render(){
         return(
             <div className="videos">
-                <Link to="/" id="home" onClick={sessionStorage.setItem('ehFiltrado', false)}>Home</Link>                
+                <Link to="/" id="home">Home</Link>                
                 <div className="lista_videos">  
                     <div className="sinal-palavra">
-                        <ScrollBox ehPalavraFiltrada={this.state.palavras} retornaPalavra={this.retornaPalavra.bind(this)}/>
+                        <ScrollBox ehPalavraFiltrada={this.verificarEhFiltrado()} retornaPalavra={this.retornaPalavraScrollBox.bind(this)}/>
                         <div className="sinal_mao">
                             <button><Link to='sinal_de_mao'>Sinal de Mão</Link></button>                                                
                         </div>                                                 
@@ -75,6 +87,7 @@ export default class Matematica extends Component{
                             </div>
                             <div id="mao-definicao">
                                 <span>Mão</span>
+                                <GetImagem informaLetra={this.state.definicao[0]}/>
                             </div>
                         </section>
                         <section>

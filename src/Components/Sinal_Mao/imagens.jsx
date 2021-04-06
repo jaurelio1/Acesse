@@ -29,9 +29,11 @@ import React, {Component} from 'react';
 
 export default class GetImagem extends Component{
     constructor(props){
-        super();
+        super(props);
+        this.state = {
+            ehFiltrado: this.props.ehFiltrado,
+        }
     }
-
     trocaTipoImagem(){
         switch(this.props.informaLetra){
             case 'A':
@@ -88,11 +90,14 @@ export default class GetImagem extends Component{
                 return Z;                
         }
     }
-
     render(){
         return(
             <section>
-                <img src={this.trocaTipoImagem()} style={{width:40}, {height:60}}/>
+                <img src={this.trocaTipoImagem()} style={{width:40}, {height:60}} onClick={()=>{
+                    this.state.ehFiltrado = true;
+                    this.props.verificarEhFiltrado(this.state.ehFiltrado);
+                    sessionStorage.setItem('letra', this.props.informaLetra);
+                }}/>
             </section>
         );
     }
