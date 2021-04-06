@@ -5,11 +5,11 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App';
-import Mat from './Disciplinas/matematica';
-import Fis from './Disciplinas/fisica';
-import Equipe from './Informacoes/Equipe/equipe';
-import Projeto from './Informacoes/Projeto/projeto';
-import Alfa from './Sinal_Mao/alfabeto';
+import Mat from './Components/Disciplinas/matematica';
+import Fis from './Components/Disciplinas/fisica';
+import Equipe from './Components/Informacoes/Equipe/equipe';
+import Projeto from './Components/Informacoes/Projeto/projeto';
+import Alfa from './Components/Sinal_Mao/alfabeto';
 
 //import * as serviceWorker from './serviceWorkerMat';
 

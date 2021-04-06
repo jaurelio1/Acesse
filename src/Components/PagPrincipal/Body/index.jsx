@@ -2,14 +2,14 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import Mat from './img/matematica.jpeg';
-import SinalFis from './img/fisica.jpeg';
+import Fis from './img/fisica.jpeg';
 
 import './style.css';
 
 const Body = () => {
     let state = {        
-        nomes_disciplinas: ['Matematica', 'Fisica'],
-        sinais: [Mat, SinalFis], 
+        nomes_disciplinas: ['matematica', 'fisica'],
+        sinais: [Mat, Fis], 
     };    
     
     const {nomes_disciplinas, sinais} = state;

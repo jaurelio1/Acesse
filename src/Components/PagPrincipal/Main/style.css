@@ -1,15 +1,16 @@
-.main .head{
-    padding-top: 15px;
-    padding-bottom: 125px;
-    display: flex;
-    flex-direction: column-reverse;  
-}
-
 .main{
+    overflow: hidden;
     background-image: url(./img/IMG_6474-1024x683.jpeg);
     background-repeat: repeat;
     background-position: center;
     background-size: cover;        
     background-color: #6AB734;
     height: 800px;
+    display: flexbox;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.main .body{
+    margin-top: 150px;
 }

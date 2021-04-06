@@ -49,9 +49,7 @@ export default class Matematica extends Component{
     retornaPalavra(palavra){
         this.setState({definicao: palavra});
         console.log(this.state.definicao);
-    }
-    
-    
+    }    
     
     openModal(){
         this.setState({isOpen: true});
