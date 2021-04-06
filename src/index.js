@@ -10,7 +10,6 @@ import Fis from './Disciplinas/fisica';
 import Equipe from './Informacoes/Equipe/equipe';
 import Projeto from './Informacoes/Projeto/projeto';
 import Alfa from './Sinal_Mao/alfabeto';
-import Filtro from './Disciplinas/matematica/filtroPalavras/filtrarPalavrasMat';
 
 //import * as serviceWorker from './serviceWorkerMat';
 
@@ -24,7 +23,6 @@ ReactDOM.render(
         <Route path='/equipe' component={Equipe}/>
         <Route path='/projeto' component={Projeto}/>
         <Route path='/sinal_de_mao' component={Alfa}/>
-        <Route path='/palavras-filtradas' component={Filtro}/>
       </Switch>
     </BrowserRouter>        
   </React.StrictMode>,

@@ -6,17 +6,9 @@ import './style.css';
 
 const Main = () =>(
     <div className='main'>
-        <div className='head'>
-            <div>
-                <Head />
-            </div>
-            <div>
-                <Info />
-            </div>
-        </div>
-        <div className="body">
-            <Body />
-        </div>                
+        <Info/>
+        <Head/>
+        <Body/>               
     </div>
 );
 
