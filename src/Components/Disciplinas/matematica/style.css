@@ -131,11 +131,12 @@
     background: #FFFF;    
 }
 
-#home{
+.videos a{
     color: black;
 }
 
-#voltar{
-    color: black;
+.videos a:hover{
+    color: blue;
 }
+
 

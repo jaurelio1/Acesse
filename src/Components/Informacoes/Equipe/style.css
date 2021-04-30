@@ -1,7 +1,14 @@
 .text{
-    background: #6AB734;
-    height: 260vh;
+    height: 250vh;
     margin-left: 10px;
     font-size: 14px;
     margin-top: 1px;
+}
+
+.text a{
+    color: black;
+}
+
+.text a:hover{
+    color: blue;
 }

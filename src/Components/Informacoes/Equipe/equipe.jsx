@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 
 const Equipe = () =>(
     <div className='text'>
+        <Link to="/" className="link">Home</Link> 
         <h5>Equipe:</h5>
         <hr/>
 
@@ -93,8 +94,7 @@ const Equipe = () =>(
         </p>
         <p>Lattes: <a href=" http://lattes.cnpq.br/8216108543777474">http://lattes.cnpq.br/8216108543777474</a> <br/>
         Contato: jose.aurelio@academico.ifpb.edu.br
-        </p>
-        <Link to="/" className="link">Voltar</Link>       
+        </p>              
     </div>
 );
 

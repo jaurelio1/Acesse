@@ -70,7 +70,7 @@ export default class Matematica extends Component{
     render(){
         return(
             <div className="videos">
-                <Link to="/" id="home">Home</Link>                
+                <Link to="/">Home</Link>                
                 <div className="lista_videos">  
                     <div className="sinal-palavra">
                         <ScrollBox ehPalavraFiltrada={this.verificarEhFiltrado()} retornaPalavra={this.retornaPalavraScrollBox.bind(this)}/>
@@ -97,8 +97,7 @@ export default class Matematica extends Component{
                             <VideoLinks indice={this.state.palavras.indexOf(this.state.definicao)}/>
                         </section>
                     </section>                                                            
-                </div>
-                <Link to="/" id="voltar">Voltar</Link>                             
+                </div>                             
             </div>            
         );
     }    
